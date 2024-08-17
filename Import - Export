@@ -1,0 +1,26 @@
+import { useState } from "react";
+import Mensagem from "./Mensagem";
+
+function App() {
+  const [name,setName] = useState("");
+  const [age,setAge] = useState("");
+  
+  console.log("aqui");
+  return (
+    <div>
+      <div>
+        <label htmlFor="nome">Nome</label> 
+        <input id="nome" value={name} onChange={(e) => setName(e.target.value)} />
+      </div>
+      <div>
+        <label htmlFor="idade">Idade</label> 
+        <input id="idade" value={age} onChange={(e) => setAge(e.target.value)} />
+      </div>
+      <Mensagem nome={name} idade={age}/>
+      <Mensagem nome={name} idade={age} />
+      <Mensagem nome={name} idade={age} />
+    </div>
+  );
+}
+
+export default App;
