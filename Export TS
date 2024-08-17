@@ -1,0 +1,10 @@
+function Mensagem(props:Props){
+    return <div>Boa noite! {props.nome} {props.idade}   </div>;
+  }
+
+export default Mensagem;
+
+interface Props{
+    nome: string;
+    idade:string;
+}
